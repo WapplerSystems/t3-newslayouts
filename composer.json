@@ -1,0 +1,18 @@
+{
+  "name": "wapplersystems/newslayouts",
+  "type": "typo3-cms-extension",
+  "description": "Extends EXT:news records with individual layout settings",
+  "homepage": "https://wappler.systems",
+  "license": [
+    "GPL-2.0+"
+  ],
+  "require": {
+    "typo3/cms-core": "^10 || ^11",
+    "georgringer/news": ">9"
+  },
+  "autoload": {
+    "psr-4": {
+      "WapplerSystems\\Newslayouts\\": "Classes"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['newslayouts'] = [
     'title' => 'Layouts for news articles',
     'description' => 'Extends EXT:news records with individual layout settings',
     'category' => 'plugin',

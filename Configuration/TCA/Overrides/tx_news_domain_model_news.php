@@ -1,6 +1,8 @@
 <?php
 
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 $fields = [
     'layout' => [
         'exclude' => true,
@@ -24,5 +26,5 @@ $fields = [
 ];
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_news_domain_model_news', $fields);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', 'layout,', '', 'after:title');
+ExtensionManagementUtility::addTCAcolumns('tx_news_domain_model_news', $fields);
+ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', 'layout,', '', 'after:title');

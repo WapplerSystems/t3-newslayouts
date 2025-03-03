@@ -1,0 +1,18 @@
+
+<sheets>
+    <template>
+        <ROOT>
+            <el>
+                <settings.cropVariant>
+                    <label>CropVariant</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <default>default</default>
+                    </config>
+                </settings.cropVariant>
+            </el>
+        </ROOT>
+    </template>
+</sheets>
+

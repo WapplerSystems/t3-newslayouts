@@ -2,7 +2,10 @@
 
 
 /* add backend css */
+
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 $GLOBALS['TBE_STYLES']['skins']['backend']['stylesheetDirectories']['newslayouts'] = 'EXT:newslayouts/Resources/Public/CSS/Backend/';
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('newslayouts', 'Configuration/TypoScript', 'News article layouts');
+ExtensionManagementUtility::addStaticFile('newslayouts', 'Configuration/TypoScript', 'News article layouts');

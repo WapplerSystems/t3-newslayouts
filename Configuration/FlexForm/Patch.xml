@@ -3,14 +3,25 @@
     <template>
         <ROOT>
             <el>
-                <settings.cropVariant>
-                    <label>CropVariant</label>
+                <settings.imageFormat>
+                    <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:imageFormat</label>
                     <config>
                         <type>select</type>
                         <renderType>selectSingle</renderType>
+                        <itemsProcFunc>WapplerSystems\Newslayouts\Hooks\ItemsProcFunc->imageFormats</itemsProcFunc>
                         <default>default</default>
+                        <items>
+                            <numIndex index="0" type="array">
+                                <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:imageFormat.default</label>
+                                <value>default</value>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:imageFormat.none</label>
+                                <value></value>
+                            </numIndex>
+                        </items>
                     </config>
-                </settings.cropVariant>
+                </settings.imageFormat>
             </el>
         </ROOT>
     </template>

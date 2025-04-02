@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z"
+		  product-name="newslayouts">
+		<header/>
+		<body>
+			<trans-unit id="layout.topImageGalleryBottom">
+				<source>Top image with gallery below the article</source>
+			</trans-unit>
+			<trans-unit id="templateLayouts.latest.3columns">
+				<source>Latest - 3 columns</source>
+			</trans-unit>
+			<trans-unit id="templateLayouts.latest.4columns">
+				<source>Latest - 4 columns</source>
+			</trans-unit>
+			<trans-unit id="templateLayouts.latest.vertical">
+				<source>Latest - Vertical</source>
+			</trans-unit>
+			<trans-unit id="templateLayouts.list.default">
+				<source>List - Default</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

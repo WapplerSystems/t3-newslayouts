@@ -1,0 +1,7 @@
+
+
+
+tx_news.templateLayouts {
+  ListDefault = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.list.default
+
+}

@@ -1,0 +1,19 @@
+
+tx_news.templateLayouts {
+  Latest4columns = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.latest.4columns
+}
+
+TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants {
+  free < cropVariants.free
+  1-1 < cropVariants.1-1
+  16-9 < cropVariants.16-9
+  3-2 < cropVariants.3-2
+  4-3 < cropVariants.4-3
+}
+
+tx_news.imageFormats {
+  16-9 = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9
+  1-1 = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1
+  3-2 = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.3_2
+  4-3 = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3
+}

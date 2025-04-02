@@ -6,21 +6,26 @@
 		<body>
 			<trans-unit id="layout">
 				<source>Layout</source>
+				<target>Layout</target>
 			</trans-unit>
 			<trans-unit id="latest_square">
 				<source>Latest square</source>
 			</trans-unit>
 			<trans-unit id="tx_news_domain_model_news.layout">
 				<source>Layout set in the plugin</source>
+				<target>Layout im Plugin gesetzt</target>
 			</trans-unit>
 			<trans-unit id="imageFormat">
 				<source>Image format</source>
+				<target>Bild-Format</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.default">
 				<source>Default of template</source>
+				<target>Standard des Templates</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.none">
 				<source>None (deactivated)</source>
+				<target>Keines (deaktiviert)</target>
 			</trans-unit>
 		</body>
 	</file>

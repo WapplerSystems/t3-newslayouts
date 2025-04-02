@@ -16,7 +16,7 @@ cropVariants {
     }
   }
 
-  square {
+  1-1 {
     title = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1
     allowedAspectRatios {
       1:1 {

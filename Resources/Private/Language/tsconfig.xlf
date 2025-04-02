@@ -5,7 +5,10 @@
 		<header/>
 		<body>
 			<trans-unit id="layout.topImageGalleryBottom">
-				<source>Top image with gallery below the article</source>
+				<source>Top image with gallery below the text</source>
+			</trans-unit>
+			<trans-unit id="layout.galleryBottom">
+				<source>Gallery below the text</source>
 			</trans-unit>
 			<trans-unit id="templateLayouts.latest.3columns">
 				<source>Latest - 3 columns</source>

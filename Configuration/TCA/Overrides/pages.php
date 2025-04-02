@@ -32,3 +32,9 @@ ExtensionManagementUtility::registerPageTSConfigFile(
     'Configuration/TsConfig/NewsLayouts/Detail/TopImageGalleryBottom.tsconfig',
     'News Layout - Detail - Top image and gallery bottom'
 );
+
+ExtensionManagementUtility::registerPageTSConfigFile(
+    'newslayouts',
+    'Configuration/TsConfig/NewsLayouts/Detail/GalleryBottom.tsconfig',
+    'News Layout - Detail - Gallery bottom'
+);

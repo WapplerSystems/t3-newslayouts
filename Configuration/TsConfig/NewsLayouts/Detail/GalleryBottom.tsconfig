@@ -1,12 +1,12 @@
 
 tx_news.templateLayouts {
-  DetailTopImageGalleryBottom = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.topImageGalleryBottom
+  DetailGalleryBottom = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.galleryBottom
 }
 
 # Layout for news article
 TCEFORM.tx_news_domain_model_news.layout.addItems {
-  topImageGalleryBottom = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.topImageGalleryBottom
-  topImageGalleryBottom.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
+  galleryBottom = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.galleryBottom
+  galleryBottom.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
 }
 
 TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants {

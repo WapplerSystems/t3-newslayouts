@@ -1,0 +1,6 @@
+plugin.tx_news.view {
+  partialRootPath = EXT:newslayouts/Resources/Private/Partials/
+  templateRootPath = EXT:newslayouts/Resources/Private/Templates/
+  layoutRootPath = EXT:newslayouts/Resources/Private/Layouts/
+}
+

@@ -2,17 +2,3 @@ plugin.tx_news.settings {
     demandClass = WapplerSystems\Newslayouts\Domain\Model\Dto\Demand
 
 }
-
-
-plugin.tx_news {
-    view {
-        templateRootPaths {
-            9 = EXT:newslayouts/Resources/Private/Templates/
-        }
-
-        partialRootPaths {
-            9 = EXT:newslayouts/Resources/Private/Partials/
-        }
-
-    }
-}

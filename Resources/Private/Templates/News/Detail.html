@@ -5,16 +5,14 @@
 
 <f:layout name="Detail"/>
 
-<!--
-	=====================
-		News/Detail.html
--->
-
 <f:section name="content">
     <f:if condition="{newsItem}">
         <f:then>
             <n:format.nothing>
                 <n:excludeDisplayedNews newsItem="{newsItem}"/>
+                <f:if condition="{settings.detail.showMetaTags}">
+                    <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
+                </f:if>
                 <f:if condition="{newsItem.alternativeTitle}">
                     <f:then>
                         <n:titleTag>
@@ -27,7 +25,6 @@
                         </n:titleTag>
                     </f:else>
                 </f:if>
-                <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
             </n:format.nothing>
             <f:if condition="{settings.detail.showPrevNext}">
                 <n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
@@ -52,15 +49,14 @@
                 </n:simplePrevNext>
             </f:if>
             <div class="header">
-                <h3 itemprop="headline">{newsItem.title}</h3>
+                <h1 itemprop="headline">{newsItem.title}</h1>
             </div>
             <div class="footer">
                 <p>
                     <!-- date -->
                     <span class="news-list-date">
-						<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+						<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
 							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-							<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}"/>
 						</time>
 					</span>
 
@@ -85,56 +81,25 @@
                     </f:if>
                 </p>
             </div>
-
             <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+                <f:if condition="{newsItem.teaser}">
+                    <!-- teaser -->
+                    <div class="teaser-text" itemprop="description">
+                        <f:format.html>{newsItem.teaser}</f:format.html>
+                    </div>
+                </f:if>
 
-                <f:switch expression="{person.gender}">
-                    <f:case value="layout1">
+                <f:if condition="{newsItem.contentElements}">
+                    <!-- content elements -->
+                    <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+                </f:if>
 
-                        <f:render partial="Teaser" arguments="{newsItem: newsItem}"/>
+                <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}"/>
 
-                        <f:render partial="ContentElements" arguments="{newsItem: newsItem}"/>
-
-                        <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
-
-                        <f:render partial="Bodytext" arguments="{newsItem: newsItem}"/>
-
-                    </f:case>
-                    <f:case value="layout2">
-
-                        <div class="row">
-                            <div class="col-xs-12 col-lg-8">
-
-                                <f:render partial="Teaser" arguments="{newsItem: newsItem}"/>
-
-                                <f:render partial="ContentElements" arguments="{newsItem: newsItem}"/>
-
-                                <f:render partial="Bodytext" arguments="{newsItem: newsItem}"/>
-
-                            </div>
-                            <div class="col-xs-12 col-lg-4">
-
-                                <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
-
-                            </div>
-
-                        </div>
-
-                    </f:case>
-                    <f:defaultCase>
-
-                        <f:render partial="Teaser" arguments="{newsItem: newsItem}"/>
-
-                        <f:render partial="ContentElements" arguments="{newsItem: newsItem}"/>
-
-                        <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
-
-                        <f:render partial="Bodytext" arguments="{newsItem: newsItem}"/>
-
-                    </f:defaultCase>
-                </f:switch>
-
-
+                <!-- main text -->
+                <div class="news-text-wrap" itemprop="articleBody">
+                    <f:format.html>{newsItem.bodytext}</f:format.html>
+                </div>
             </n:renderMedia>
 
             <f:if condition="{settings.backPid}">
@@ -157,15 +122,17 @@
                 </n:extensionLoaded>
             </f:if>
 
-            <f:if condition="{settings.detail.disqusShortname}">
-                <div id="disqus_thread"></div>
-                <n:social.disqus newsItem="{newsItem}"
-                                 shortName="{settings.detail.disqusShortname}"
-                                 link="{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}')}"/>
-            </f:if>
-
             <!-- related things -->
             <div class="news-related-wrap">
+                <f:comment>
+                    Various options exist to fetch different related information:
+                    - {newsItem.allRelatedSorted}: all related news, related und related from, sorted by date
+                    - {newsItem.related}: all related
+                    - {newsItem.relatedSorted}: all related, sorted by date
+                    - {newsItem.relatedFrom}: all related from
+                    - {newsItem.relatedFromSortedByForeign}: all related from sorted by foreign sorting
+                    - {newsItem.relatedFromSorted}: all related from, sorted by date
+                </f:comment>
 
                 <f:if condition="{newsItem.allRelatedSorted}">
                     <!-- Related news records -->
@@ -219,7 +186,7 @@
                         <ul>
                             <f:for each="{newsItem.relatedLinks}" as="relatedLink">
                                 <li>
-                                    <f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.page>
+                                    <f:link.typolink parameter="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.typolink>
                                     <f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
                                 </li>
                             </f:for>

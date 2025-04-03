@@ -3,8 +3,23 @@
     <template>
         <ROOT>
             <el>
+                <settings.allowLayoutOverwriteByRecord>
+                    <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:allowLayoutOverwriteByRecord</label>
+                    <config>
+                        <type>checkbox</type>
+                        <renderType>checkboxToggle</renderType>
+                        <default>0</default>
+                        <items>
+                            <numIndex index="0" type="array">
+                                <label></label>
+                                <value>1</value>
+                            </numIndex>
+                        </items>
+                    </config>
+                </settings.allowLayoutOverwriteByRecord>
                 <settings.imageFormat>
                     <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:imageFormat</label>
+                    <description>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:imageFormat.description</description>
                     <config>
                         <type>select</type>
                         <renderType>selectSingle</renderType>

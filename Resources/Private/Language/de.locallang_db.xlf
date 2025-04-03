@@ -19,6 +19,10 @@
 				<source>Image format</source>
 				<target>Bild-Format</target>
 			</trans-unit>
+			<trans-unit id="imageFormat.description">
+				<source>Use this image format if it supports the layout</source>
+				<target>Benutze dieses Bildformat, wenn es das Layout unterstützt</target>
+			</trans-unit>
 			<trans-unit id="imageFormat.default">
 				<source>Default of template</source>
 				<target>Standard des Templates</target>
@@ -26,6 +30,14 @@
 			<trans-unit id="imageFormat.none">
 				<source>None (deactivated)</source>
 				<target>Keines (deaktiviert)</target>
+			</trans-unit>
+			<trans-unit id="allow">
+				<source>Allow</source>
+				<target>Erlaube</target>
+			</trans-unit>
+			<trans-unit id="allowLayoutOverwriteByRecord">
+				<source>Allow the layout to be overwritten by the data set</source>
+				<target>Erlaube das Überschreiben des Layouts durch den Datensatz</target>
 			</trans-unit>
 		</body>
 	</file>

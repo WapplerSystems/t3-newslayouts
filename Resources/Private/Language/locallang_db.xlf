@@ -16,11 +16,20 @@
 			<trans-unit id="imageFormat">
 				<source>Image format</source>
 			</trans-unit>
+			<trans-unit id="imageFormat.description">
+				<source>Use this image format if it supports the layout</source>
+			</trans-unit>
 			<trans-unit id="imageFormat.default">
 				<source>Default of template</source>
 			</trans-unit>
 			<trans-unit id="imageFormat.none">
 				<source>None (deactivated)</source>
+			</trans-unit>
+			<trans-unit id="allow">
+				<source>Allow</source>
+			</trans-unit>
+			<trans-unit id="allowLayoutOverwriteByRecord">
+				<source>Allow the layout to be overwritten by the data set</source>
 			</trans-unit>
 		</body>
 	</file>

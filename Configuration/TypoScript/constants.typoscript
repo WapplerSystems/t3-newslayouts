@@ -20,6 +20,13 @@ plugin.tx_news.settings {
 
     # cat=plugin.tx_news/latest/c; type=int+; label=Heading type
     headingType = 3
+
+    # cat=plugin.tx_news/latest/d; type=boolean; label=Show date
+    showDate = 1
+    # cat=plugin.tx_news/latest/e; type=boolean; label=Show category
+    showCategory = 1
+    # cat=plugin.tx_news/latest/f; type=boolean; label=Show author
+    showAuthor = 1
   }
 
   list {

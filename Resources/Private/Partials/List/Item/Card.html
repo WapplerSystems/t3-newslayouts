@@ -2,15 +2,9 @@
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
+<div class="card article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
     <n:excludeDisplayedNews newsItem="{newsItem}"/>
-    <div class="header">
-        <h3>
-            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
-                <span itemprop="headline">{newsItem.title}</span>
-            </n:link>
-        </h3>
-    </div>
+
 
     <div class="">
         <f:variable name="cropVariant" value="{f:if(condition: '{settings.imageFormat} == \'default\'',then:'4-3',else:settings.imageFormat)}" />
@@ -27,6 +21,14 @@
 
             </f:else>
         </f:if>
+    </div>
+
+    <div class="header">
+        <h3>
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+                <span itemprop="headline">{newsItem.title}</span>
+            </n:link>
+        </h3>
     </div>
 
     <f:render partial="Teaser" arguments="{_all}"/>

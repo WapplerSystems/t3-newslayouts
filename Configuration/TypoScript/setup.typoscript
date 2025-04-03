@@ -9,11 +9,16 @@ plugin.tx_news.settings {
   latest {
     maxWidth = {$plugin.tx_news.settings.latest.maxWidth}
     maxHeight = {$plugin.tx_news.settings.latest.maxHeight}
+    headingType = {$plugin.tx_news.settings.latest.headingType}
+    showDate = {$plugin.tx_news.settings.latest.showDate}
+    showCategory = {$plugin.tx_news.settings.latest.showCategory}
+    showAuthor = {$plugin.tx_news.settings.latest.showAuthor}
   }
 
   list {
     maxWidth = {$plugin.tx_news.settings.list.maxWidth}
     maxHeight = {$plugin.tx_news.settings.list.maxHeight}
+    headingType = {$plugin.tx_news.settings.list.headingType}
   }
 
   detail {
@@ -29,6 +34,7 @@ plugin.tx_news.settings {
 
     maxWidth = {$plugin.tx_news.settings.detail.maxWidth}
     maxHeight = {$plugin.tx_news.settings.detail.maxHeight}
+    headingType = {$plugin.tx_news.settings.detail.headingType}
   }
 
 

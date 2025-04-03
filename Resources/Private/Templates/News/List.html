@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:nl="http://typo3.org/ns/WapplerSystems/Newslayouts/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:layout name="General"/>
 
@@ -10,7 +11,15 @@
         <f:then>
             <div class="news-list-view" id="news-container-{contentObjectData.uid}">
 
-                <f:render partial="List" arguments="{_all}"/>
+                <f:if condition="{nl:partialExists(partial: 'List/{settings.templateLayout}')}">
+                    <f:then>
+                        <f:render partial="List/{settings.templateLayout}" arguments="{_all}" />
+                    </f:then>
+                    <f:else>
+
+                        <div class="alert alert-info">Partial List/{settings.templateLayout} not found</div>
+                    </f:else>
+                </f:if>
 
             </div>
         </f:then>

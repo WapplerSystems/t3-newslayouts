@@ -7,6 +7,6 @@ services:
   WapplerSystems\Newslayouts\EventListener\ModifyFlexformEvent:
     tags:
       - name: event.listener
-        identifier: 'flexParsing'
+        identifier: 'newslayoutFlexformPatching'
         event: TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureParsedEvent
 

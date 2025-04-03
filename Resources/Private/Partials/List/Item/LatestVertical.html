@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
+    <n:excludeDisplayedNews newsItem="{newsItem}"/>
+    <div class="header">
+        <h3>
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+                <span itemprop="headline">{newsItem.title}</span>
+            </n:link>
+        </h3>
+    </div>
+
+    <div class="">
+        <f:variable name="cropVariant" value="{f:if(condition: '{settings.imageFormat} == \'default\'',then:'4-3',else:settings.imageFormat)}" />
+
+        <f:if condition="{newsItem.mediaPreviews}">
+            <f:then>
+
+                <f:render partial="Media" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.latest.maxHeight, maxWidth:settings.latest.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant }" />
+
+            </f:then>
+            <f:else>
+
+                <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.latest.maxHeight, maxWidth:settings.latest.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant}" />
+
+            </f:else>
+        </f:if>
+    </div>
+
+    <f:render partial="Teaser" arguments="{_all}"/>
+
+    <div class="footer">
+
+        <f:render partial="Meta" arguments="{_all}"/>
+
+
+    </div>
+</div>
+</html>

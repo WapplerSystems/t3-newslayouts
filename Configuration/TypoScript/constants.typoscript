@@ -1,6 +1,62 @@
+
+# customsubcategory=list=List View
+# customsubcategory=latest=Latest View
+# customsubcategory=detail=Detail View
+# customsubcategory=gallery=Gallery
+
 plugin.tx_news.view {
   partialRootPath = EXT:newslayouts/Resources/Private/Partials/
   templateRootPath = EXT:newslayouts/Resources/Private/Templates/
   layoutRootPath = EXT:newslayouts/Resources/Private/Layouts/
 }
 
+plugin.tx_news.settings {
+
+  latest {
+    # cat=plugin.tx_news/latest/a; type=int+; label=Maximum image width
+    maxWidth = 300
+    # cat=plugin.tx_news/latest/b; type=int+; label=Maximum image height
+    maxHeight =
+
+    # cat=plugin.tx_news/latest/c; type=int+; label=Heading type
+    headingType = 3
+  }
+
+  list {
+    # cat=plugin.tx_news/list/a; type=int+; label=Maximum image width
+    maxWidth = 600
+    # cat=plugin.tx_news/list/b; type=int+; label=Maximum image height
+    maxHeight =
+
+    # cat=plugin.tx_news/list/c; type=int+; label=Heading type
+    headingType = 3
+  }
+
+  detail {
+
+
+    top {
+      # cat=plugin.tx_news/detail/top-a; type=int+; label=Top image - maximum image width
+      maxWidth = 600
+      # cat=plugin.tx_news/detail/top-b; type=int+; label=Top image - maximum image height
+      maxHeight =
+    }
+
+    gallery {
+      # cat=plugin.tx_news/detail/gallery-a; type=int+; label=Gallery images - maximum image width
+      maxWidth = 600
+      # cat=plugin.tx_news/detail/gallery-b; type=int+; label=Gallery images - maximum image height
+      maxHeight =
+    }
+
+    # cat=plugin.tx_news/detail/a; type=int+; label=Default - maximum image width
+    maxWidth = 600
+    # cat=plugin.tx_news/detail/b; type=int+; label=Default - maximum image height
+    maxHeight =
+    # cat=plugin.tx_news/detail/c; type=int+; label=Heading type
+    headingType = 1
+  }
+
+
+
+}

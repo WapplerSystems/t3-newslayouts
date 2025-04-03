@@ -2,3 +2,34 @@ plugin.tx_news.settings {
     demandClass = WapplerSystems\Newslayouts\Domain\Model\Dto\Demand
 
 }
+
+
+plugin.tx_news.settings {
+
+  latest {
+    maxWidth = {$plugin.tx_news.settings.latest.maxWidth}
+    maxHeight = {$plugin.tx_news.settings.latest.maxHeight}
+  }
+
+  list {
+    maxWidth = {$plugin.tx_news.settings.list.maxWidth}
+    maxHeight = {$plugin.tx_news.settings.list.maxHeight}
+  }
+
+  detail {
+    top {
+      maxWidth = {$plugin.tx_news.settings.detail.top.maxWidth}
+      maxHeight = {$plugin.tx_news.settings.detail.top.maxHeight}
+    }
+
+    gallery {
+      maxWidth = {$plugin.tx_news.settings.detail.gallery.maxWidth}
+      maxHeight = {$plugin.tx_news.settings.detail.gallery.maxHeight}
+    }
+
+    maxWidth = {$plugin.tx_news.settings.detail.maxWidth}
+    maxHeight = {$plugin.tx_news.settings.detail.maxHeight}
+  }
+
+
+}

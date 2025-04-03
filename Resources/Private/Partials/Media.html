@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+    <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+        <f:if condition="{mediaElement.originalResource.type} == 2">
+            <f:image image="{mediaElement}" cropVariant="{cropVariant}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{lazyLoading}" maxWidth="{maxWidth}"
+                     maxHeight="{maxHeight}"/>
+        </f:if>
+        <f:if condition="{mediaElement.originalResource.type} == 4">
+            <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+        </f:if>
+        <f:if condition="{mediaElement.originalResource.type} == 5">
+            <f:image image="{mediaElement}" cropVariant="{cropVariant}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{lazyLoading}" maxWidth="{maxWidth}"
+                     maxHeight="{maxHeight}"/>
+        </f:if>
+    </f:alias>
+</n:link>
+
+</html>

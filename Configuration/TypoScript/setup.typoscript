@@ -6,6 +6,8 @@ plugin.tx_news.settings {
 
 plugin.tx_news.settings {
 
+  imageClass = {$plugin.tx_news.settings.imageClass}
+
   latest {
     maxWidth = {$plugin.tx_news.settings.latest.maxWidth}
     maxHeight = {$plugin.tx_news.settings.latest.maxHeight}

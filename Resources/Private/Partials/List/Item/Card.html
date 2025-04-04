@@ -12,12 +12,12 @@
         <f:if condition="{newsItem.mediaPreviews}">
             <f:then>
 
-                <f:render partial="Media" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.latest.maxHeight, maxWidth:settings.latest.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant }" />
+                <f:render partial="Media" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.latest.maxHeight, maxWidth:settings.latest.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:settings.imageClass }" />
 
             </f:then>
             <f:else>
 
-                <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.latest.maxHeight, maxWidth:settings.latest.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant}" />
+                <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.latest.maxHeight, maxWidth:settings.latest.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:settings.imageClass}" />
 
             </f:else>
         </f:if>

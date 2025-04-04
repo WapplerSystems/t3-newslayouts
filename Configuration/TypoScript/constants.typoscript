@@ -3,6 +3,7 @@
 # customsubcategory=latest=Latest View
 # customsubcategory=detail=Detail View
 # customsubcategory=gallery=Gallery
+# customsubcategory=image=Image settings
 
 plugin.tx_news.view {
   partialRootPath = EXT:newslayouts/Resources/Private/Partials/
@@ -11,6 +12,9 @@ plugin.tx_news.view {
 }
 
 plugin.tx_news.settings {
+
+  # cat=plugin.tx_news/image/a; type=string; label=Image class
+  imageClass = img-fluid
 
   latest {
     # cat=plugin.tx_news/latest/a; type=int+; label=Maximum image width

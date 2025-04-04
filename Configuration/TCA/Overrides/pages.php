@@ -5,20 +5,20 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 ExtensionManagementUtility::registerPageTSConfigFile(
     'newslayouts',
-    'Configuration/TsConfig/NewsLayouts/Latest/Vertical.tsconfig',
-    'News Layout - Latest - Vertical'
+    'Configuration/TsConfig/NewsLayouts/List/Vertical.tsconfig',
+    'News Layout - List - Vertical'
 );
 
 ExtensionManagementUtility::registerPageTSConfigFile(
     'newslayouts',
-    'Configuration/TsConfig/NewsLayouts/Latest/3columns.tsconfig',
-    'News Layout - Latest - 3 Columns'
+    'Configuration/TsConfig/NewsLayouts/List/3columns.tsconfig',
+    'News Layout - List - 3 Columns'
 );
 
 ExtensionManagementUtility::registerPageTSConfigFile(
     'newslayouts',
-    'Configuration/TsConfig/NewsLayouts/Latest/4columns.tsconfig',
-    'News Layout - Latest - 4 Columns'
+    'Configuration/TsConfig/NewsLayouts/List/4columns.tsconfig',
+    'News Layout - List - 4 Columns'
 );
 
 ExtensionManagementUtility::registerPageTSConfigFile(
@@ -29,12 +29,14 @@ ExtensionManagementUtility::registerPageTSConfigFile(
 
 ExtensionManagementUtility::registerPageTSConfigFile(
     'newslayouts',
-    'Configuration/TsConfig/NewsLayouts/Detail/TopImageGalleryBottom.tsconfig',
-    'News Layout - Detail - Top image and gallery bottom'
+    'Configuration/TsConfig/NewsLayouts/Detail/Default.tsconfig',
+    'News Layout - Detail - Text top'
 );
 
 ExtensionManagementUtility::registerPageTSConfigFile(
     'newslayouts',
-    'Configuration/TsConfig/NewsLayouts/Detail/GalleryBottom.tsconfig',
-    'News Layout - Detail - Gallery bottom'
+    'Configuration/TsConfig/NewsLayouts/Detail/TopImage.tsconfig',
+    'News Layout - Detail - Top image'
 );
+
+

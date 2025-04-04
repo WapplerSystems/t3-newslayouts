@@ -4,11 +4,11 @@
 		  product-name="newslayouts">
 		<header/>
 		<body>
-			<trans-unit id="layout">
+			<trans-unit id="tx_news_domain_model_news.layout">
 				<source>Layout</source>
 			</trans-unit>
-			<trans-unit id="latest_square">
-				<source>Latest square</source>
+			<trans-unit id="tx_news_domain_model_news.gallery">
+				<source>Gallery</source>
 			</trans-unit>
 			<trans-unit id="tx_news_domain_model_news.layout">
 				<source>Layout set in the plugin</source>

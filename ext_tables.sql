@@ -3,5 +3,6 @@
 #
 CREATE TABLE tx_news_domain_model_news
 (
-    layout varchar(50) DEFAULT '' NOT NULL
+	layout  varchar(50)      DEFAULT '' NOT NULL,
+	gallery int(11) unsigned DEFAULT '0'
 );

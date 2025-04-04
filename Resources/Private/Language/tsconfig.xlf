@@ -10,14 +10,14 @@
 			<trans-unit id="layout.galleryBottom">
 				<source>Gallery below the text</source>
 			</trans-unit>
-			<trans-unit id="templateLayouts.latest.3columns">
-				<source>Latest - 3 columns</source>
+			<trans-unit id="templateLayouts.list.3columns">
+				<source>List - 3 columns</source>
 			</trans-unit>
-			<trans-unit id="templateLayouts.latest.4columns">
-				<source>Latest - 4 columns</source>
+			<trans-unit id="templateLayouts.list.4columns">
+				<source>List - 4 columns</source>
 			</trans-unit>
-			<trans-unit id="templateLayouts.latest.vertical">
-				<source>Latest - Vertical</source>
+			<trans-unit id="templateLayouts.list.vertical">
+				<source>List - Vertical</source>
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.default">
 				<source>List - Default</source>

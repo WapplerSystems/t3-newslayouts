@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Layouts for news articles',
-    'description' => 'Extends EXT:news records with individual layout settings',
+    'description' => 'Extends EXT:news plugins and records with individual layout settings. Supports bootstrap css framework.',
     'category' => 'plugin',
     'author' => 'Sven Wappler',
     'author_email' => 'typo3YYYY@wappler.systems',

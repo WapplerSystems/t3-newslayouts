@@ -12,16 +12,16 @@
 				<source>Gallery below the text</source>
 				<target>Galerie unterhalb des Textes</target>
 			</trans-unit>
-			<trans-unit id="templateLayouts.latest.3columns">
-				<source>Latest - 3 columns</source>
+			<trans-unit id="templateLayouts.list.3columns">
+				<source>List - 3 columns</source>
 				<target>Neuste - 3 Spalten</target>
 			</trans-unit>
-			<trans-unit id="templateLayouts.latest.4columns">
-				<source>Latest - 4 columns</source>
+			<trans-unit id="templateLayouts.list.4columns">
+				<source>List - 4 columns</source>
 				<target>Neuste - 4 Spalten</target>
 			</trans-unit>
-			<trans-unit id="templateLayouts.latest.vertical">
-				<source>Latest - Vertical</source>
+			<trans-unit id="templateLayouts.list.vertical">
+				<source>List - Vertical</source>
 				<target>Neuste - Vertikal</target>
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.default">

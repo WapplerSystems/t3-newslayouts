@@ -5,25 +5,17 @@
 
 <f:if condition="{settings.hidePagination}">
     <f:then>
-        <div class="row">
-            <f:for each="{news}" as="newsItem" iteration="iterator">
-                <div class="col-12 col-md-3">
-                    <f:render partial="List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
-                </div>
-            </f:for>
-        </div>
+        <f:for each="{news}" as="newsItem" iteration="iterator">
+            <f:render partial="List/Item/Default" arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
+        </f:for>
     </f:then>
     <f:else>
         <f:if condition="{settings.list.paginate.insertAbove}">
             <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator:pagination.paginator}"/>
         </f:if>
-        <div class="row">
-            <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-                <div class="col-12 col-md-3">
-                    <f:render partial="List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
-                </div>
-            </f:for>
-        </div>
+        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+            <f:render partial="List/Item/Default" arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
+        </f:for>
         <f:if condition="{settings.list.paginate.insertBelow}">
             <f:render partial="List/Pagination" arguments="{pagination:pagination.pagination, paginator:pagination.paginator}"/>
         </f:if>

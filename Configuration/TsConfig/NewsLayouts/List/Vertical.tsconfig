@@ -1,6 +1,6 @@
 
 tx_news.templateLayouts {
-  LatestVertical = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.latest.vertical
+  ListVertical = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.list.vertical
 }
 
 TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants {

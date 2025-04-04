@@ -1,6 +1,6 @@
 
 tx_news.templateLayouts {
-  Latest3columns = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.latest.3columns
+  List3columns = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.list.3columns
 }
 
 TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants {

@@ -37,6 +37,70 @@
                         </items>
                     </config>
                 </settings.imageFormat>
+                <settings.meta.showDate>
+                    <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showDate</label>
+                    <config>
+                        <type>checkbox</type>
+                        <renderType>checkboxToggle</renderType>
+                        <default>1</default>
+                        <items>
+                            <numIndex index="0" type="array">
+                                <label></label>
+                                <value>1</value>
+                            </numIndex>
+                        </items>
+                    </config>
+                </settings.meta.showDate>
+                <settings.meta.showCategory>
+                    <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showCategory</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <default>first</default>
+                        <items>
+                            <numIndex index="0" type="array">
+                                <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showCategory.none</label>
+                                <value>none</value>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showCategory.first</label>
+                                <value>first</value>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showCategory.all</label>
+                                <value>all</value>
+                            </numIndex>
+                        </items>
+                    </config>
+                </settings.meta.showCategory>
+                <settings.meta.showTags>
+                    <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showTags</label>
+                    <config>
+                        <type>checkbox</type>
+                        <renderType>checkboxToggle</renderType>
+                        <default>1</default>
+                        <items>
+                            <numIndex index="0" type="array">
+                                <label></label>
+                                <value>1</value>
+                            </numIndex>
+                        </items>
+                    </config>
+                </settings.meta.showTags>
+                <settings.meta.showAuthor>
+                    <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showAuthor</label>
+                    <config>
+                        <type>checkbox</type>
+                        <renderType>checkboxToggle</renderType>
+                        <default>1</default>
+                        <items>
+                            <numIndex index="0" type="array">
+                                <label></label>
+                                <value>1</value>
+                            </numIndex>
+                        </items>
+                    </config>
+                </settings.meta.showAuthor>
             </el>
         </ROOT>
     </template>

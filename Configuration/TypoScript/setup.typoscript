@@ -10,10 +10,6 @@ plugin.tx_news.settings {
 
   list {
     headingType = {$plugin.tx_news.settings.list.headingType}
-
-    showDate = {$plugin.tx_news.settings.list.showDate}
-    showCategory = {$plugin.tx_news.settings.list.showCategory}
-    showAuthor = {$plugin.tx_news.settings.list.showAuthor}
   }
 
   detail {

@@ -31,6 +31,21 @@
 			<trans-unit id="allowLayoutOverwriteByRecord">
 				<source>Allow the layout to be overwritten by the data set</source>
 			</trans-unit>
+			<trans-unit id="meta.showDate">
+				<source>Show date</source>
+			</trans-unit>
+			<trans-unit id="meta.showCategory">
+				<source>Show category</source>
+			</trans-unit>
+			<trans-unit id="meta.showCategory.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="meta.showCategory.first">
+				<source>First</source>
+			</trans-unit>
+			<trans-unit id="meta.showCategory.all">
+				<source>All</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

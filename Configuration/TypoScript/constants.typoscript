@@ -12,6 +12,8 @@ plugin.tx_news.view {
 
 plugin.tx_news.settings {
 
+  cssFile = EXT:newslayouts/Resources/Public/CSS/newslayouts.css
+
   # cat=plugin.tx_news/image/a; type=string; label=Image class
   imageClass = img-fluid
 
@@ -20,12 +22,6 @@ plugin.tx_news.settings {
     # cat=plugin.tx_news/list/c; type=int+; label=Heading type
     headingType = 3
 
-    # cat=plugin.tx_news/list/d; type=boolean; label=Show date
-    showDate = 1
-    # cat=plugin.tx_news/list/e; type=boolean; label=Show category
-    showCategory = 1
-    # cat=plugin.tx_news/list/f; type=boolean; label=Show author
-    showAuthor = 1
   }
 
   detail {

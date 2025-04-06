@@ -40,6 +40,18 @@
 				<source>Allow the layout to be overwritten by the data set</source>
 				<target>Erlaube das Überschreiben des Layouts durch den Datensatz</target>
 			</trans-unit>
+			<trans-unit id="meta.showDate">
+				<target>Zeige das Datum</target>
+			</trans-unit>
+			<trans-unit id="meta.showCategory">
+				<target>Zeige Kategorie</target>
+			</trans-unit>
+			<trans-unit id="meta.showTags">
+				<target>Zeige Tags</target>
+			</trans-unit>
+			<trans-unit id="meta.showAuthor">
+				<target>Zeige den Autor</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -1,0 +1,19 @@
+
+
+.news-card {
+    --bs-card-cap-bg: transparent;
+}
+
+.news-meta {
+    color: var(--bs-secondary-color);
+
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.news-card a {
+    text-decoration: none;
+}

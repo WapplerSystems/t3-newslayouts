@@ -62,5 +62,15 @@ class News extends \GeorgRinger\News\Domain\Model\News
         return $this->gallery;
     }
 
+    public function getMediaNonPreviewsWithoutFirst() : array
+    {
+        $media = $this->getMediaNonPreviews();
+        if ($media === null || count($media) === 0) {
+            return [];
+        }
+        $media = array_slice($media, 1);
+        return $media;
+    }
+
 
 }

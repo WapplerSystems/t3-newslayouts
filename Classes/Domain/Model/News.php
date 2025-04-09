@@ -59,7 +59,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
      */
     public function getGallery(): ?ObjectStorage
     {
-        return $this->falMedia;
+        return $this->gallery;
     }
 
 

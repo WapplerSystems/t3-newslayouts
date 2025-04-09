@@ -2,14 +2,11 @@
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-
 <f:if condition="{settings.hidePagination}">
     <f:then>
-        <div class="row gy-5">
+        <div class="d-flex gy-5 flex-column">
             <f:for each="{news}" as="newsItem" iteration="iterator">
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <f:render partial="List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
-                </div>
+                <f:render partial="Layouts/List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
             </f:for>
         </div>
     </f:then>
@@ -17,11 +14,9 @@
         <f:if condition="{settings.list.paginate.insertAbove}">
             <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator:pagination.paginator}"/>
         </f:if>
-        <div class="row gy-5">
+        <div class="d-flex gy-5 flex-column">
             <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <f:render partial="List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
-                </div>
+                <f:render partial="Layouts/List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
             </f:for>
         </div>
         <f:if condition="{settings.list.paginate.insertBelow}">
@@ -29,6 +24,5 @@
         </f:if>
     </f:else>
 </f:if>
-
 
 </html>

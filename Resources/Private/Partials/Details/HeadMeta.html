@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<n:format.nothing>
+    <n:excludeDisplayedNews newsItem="{newsItem}"/>
+    <f:if condition="{settings.detail.showMetaTags}">
+        <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
+    </f:if>
+    <f:if condition="{newsItem.alternativeTitle}">
+        <f:then>
+            <n:titleTag>
+                <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+            </n:titleTag>
+        </f:then>
+        <f:else>
+            <n:titleTag>
+                <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+            </n:titleTag>
+        </f:else>
+    </f:if>
+</n:format.nothing>
+
+</html>

@@ -1,16 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:nl="http://typo3.org/ns/WapplerSystems/Newslayouts/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
     <n:excludeDisplayedNews newsItem="{newsItem}"/>
     <!-- header -->
     <div class="header">
-        <h3>
+        <nl:tag name="h{headingType}">
             <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
                 <span itemprop="headline">{newsItem.title}</span>
             </n:link>
-        </h3>
+        </nl:tag>
     </div>
 
 
@@ -29,19 +30,8 @@
 
     </f:if>
 
-
-
     <div class="teaser-text">
-        <n:removeMediaTags>
-            <f:if condition="{newsItem.teaser}">
-                <f:then>
-                    <div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
-                </f:then>
-                <f:else>
-                    <div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
-                </f:else>
-            </f:if>
-        </n:removeMediaTags>
+        <f:render partial="Teaser" arguments="{_all}"/>
 
         <n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
             <f:translate key="more-link"/>

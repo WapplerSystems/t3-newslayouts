@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="news-gallery">
+<f:for each="{newsItem.gallery}" as="galleryItem" iteration="iterator">
+
+    <div class="news-gallery__item">
+        <f:image image="{galleryItem}" title="{galleryItem.title}" alt="{galleryItem.alternative}" maxWidth="{settings.detail.gallery.maxWidth}" cropVariant="1-1"  />
+    </div>
+
+</f:for>
+</div>
+
+</html>

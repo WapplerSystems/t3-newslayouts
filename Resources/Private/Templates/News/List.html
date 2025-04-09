@@ -11,12 +11,12 @@
         <f:then>
             <div class="news-list-view" id="news-container-{contentObjectData.uid}">
 
-                <f:if condition="{nl:partialExists(partial: 'List/{settings.templateLayout}')}">
+                <f:if condition="{nl:partialExists(partial: 'Layouts/List/{settings.templateLayout}')}">
                     <f:then>
-                        <f:render partial="List/{settings.templateLayout}" arguments="{_all}" />
+                        <f:render partial="Layouts/List/{settings.templateLayout}" arguments="{_all}" />
                     </f:then>
                     <f:else>
-                        <div class="alert alert-info">Partial List/{settings.templateLayout} not found</div>
+                        <div class="alert alert-info">Partial Layouts/List/{settings.templateLayout} not found</div>
                     </f:else>
                 </f:if>
 

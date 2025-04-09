@@ -13,24 +13,24 @@
             <f:if condition="{settings.allowLayoutOverwriteByRecord} && {newsItem.layout} != ''">
                 <f:then>
 
-                    <f:if condition="{nl:partialExists(partial: 'Detail/{newsItem.layout}')}">
+                    <f:if condition="{nl:partialExists(partial: 'Layouts/Detail/{newsItem.layout}')}">
                         <f:then>
-                            <f:render partial="Detail/{newsItem.layout}" arguments="{_all}" />
+                            <f:render partial="Layouts/Detail/{newsItem.layout}" arguments="{_all}" />
                         </f:then>
                         <f:else>
-                            <div class="alert alert-info">Partial Detail/{newsItem.layout} not found</div>
+                            <div class="alert alert-info">Partial Layouts/Detail/{newsItem.layout} not found</div>
                         </f:else>
                     </f:if>
 
                 </f:then>
                 <f:else>
 
-                    <f:if condition="{nl:partialExists(partial: 'Detail/{settings.templateLayout}')}">
+                    <f:if condition="{nl:partialExists(partial: 'Layouts/Detail/{settings.templateLayout}')}">
                         <f:then>
-                            <f:render partial="Detail/{settings.templateLayout}" arguments="{_all}" />
+                            <f:render partial="Layouts/Detail/{settings.templateLayout}" arguments="{_all}" />
                         </f:then>
                         <f:else>
-                            <div class="alert alert-info">Partial Detail/{settings.templateLayout} not found</div>
+                            <div class="alert alert-info">Partial Layouts/Detail/{settings.templateLayout} not found</div>
                         </f:else>
                     </f:if>
 

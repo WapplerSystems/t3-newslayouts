@@ -3,8 +3,8 @@
       data-namespace-typo3-fluid="true">
 
 
-<f:render partial="Details/HeadMeta" arguments="{_all}" />
-<f:render partial="Details/PrevNextButtons" arguments="{_all}" />
+<f:render partial="Detail/HeadMeta" arguments="{_all}" />
+<f:render partial="Detail/PrevNextButtons" arguments="{_all}" />
 
 
 <div class="header">
@@ -74,17 +74,7 @@
     </n:extensionLoaded>
 </f:if>
 
-<!-- related things -->
 <div class="news-related-wrap">
-    <f:comment>
-        Various options exist to fetch different related information:
-        - {newsItem.allRelatedSorted}: all related news, related und related from, sorted by date
-        - {newsItem.related}: all related
-        - {newsItem.relatedSorted}: all related, sorted by date
-        - {newsItem.relatedFrom}: all related from
-        - {newsItem.relatedFromSortedByForeign}: all related from sorted by foreign sorting
-        - {newsItem.relatedFromSorted}: all related from, sorted by date
-    </f:comment>
 
     <f:if condition="{newsItem.allRelatedSorted}">
         <!-- Related news records -->
@@ -147,7 +137,7 @@
     </f:if>
 
 
-    <f:render partial="Details/Gallery" arguments="{_all}" />
+    <f:render partial="Detail/Gallery" arguments="{_all}" />
 
 </div>
 

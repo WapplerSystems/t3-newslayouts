@@ -1,7 +1,7 @@
-TCEFORM.tx_news_domain_model_news.layout {
-    #addItems.layout2 = Layout 2
-    #addItems.layout2.icon = EXT:newslayouts/Resources/Public/Icons/layout2.svg
-}
+
+
+
+
 
 # image formats
 
@@ -58,3 +58,27 @@ cropVariants {
 
 }
 
+
+tx_news.templateLayouts {
+  Default = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.default
+}
+
+# Layout for news article
+TCEFORM.tx_news_domain_model_news.layout.addItems {
+  Default = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.default
+  #Default.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
+}
+
+TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants {
+  1-1 < cropVariants.1-1
+  16-9 < cropVariants.16-9
+}
+
+TCEFORM.tx_news_domain_model_news.gallery.config.overrideChildTca.columns.crop.config.cropVariants {
+  1-1 < cropVariants.1-1
+}
+
+tx_news.imageFormats {
+  1-1 = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1
+  16-9 = LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9
+}

@@ -4,8 +4,8 @@
 		  product-name="newslayouts">
 		<header/>
 		<body>
-			<trans-unit id="templateLayouts.detail.default">
-				<source>Detail - Default</source>
+			<trans-unit id="templateLayouts.default">
+				<source>Default</source>
 			</trans-unit>
 			<trans-unit id="templateLayouts.detail.topImage">
 				<source>Detail - Top image with the text</source>
@@ -18,9 +18,6 @@
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.vertical">
 				<source>List - Vertical</source>
-			</trans-unit>
-			<trans-unit id="templateLayouts.list.default">
-				<source>List - Default</source>
 			</trans-unit>
 		</body>
 	</file>

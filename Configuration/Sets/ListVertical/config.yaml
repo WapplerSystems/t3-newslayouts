@@ -1,0 +1,4 @@
+name: wapplersystems/newslayouts-list-vertical
+label: Newslayouts Vertical List View
+dependencies:
+  - wapplersystems/newslayouts

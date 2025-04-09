@@ -1,11 +1,11 @@
 
 tx_news.templateLayouts {
-  DetailTopImage = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.topImage
+  DetailTopImage = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.detail.topImage
 }
 
 # Layout for news article
 TCEFORM.tx_news_domain_model_news.layout.addItems {
-  topImage = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.topImage
+  topImage = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.detail.topImage
   topImage.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
 }
 

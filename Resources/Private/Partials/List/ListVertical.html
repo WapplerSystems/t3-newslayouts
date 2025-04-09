@@ -4,7 +4,7 @@
 
 <f:if condition="{settings.hidePagination}">
     <f:then>
-        <div class="d-flex gy-5">
+        <div class="d-flex gy-5 flex-column">
             <f:for each="{news}" as="newsItem" iteration="iterator">
                 <f:render partial="List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
             </f:for>
@@ -14,7 +14,7 @@
         <f:if condition="{settings.list.paginate.insertAbove}">
             <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator:pagination.paginator}"/>
         </f:if>
-        <div class="d-flex gy-5">
+        <div class="d-flex gy-5 flex-column">
             <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
                 <f:render partial="List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
             </f:for>

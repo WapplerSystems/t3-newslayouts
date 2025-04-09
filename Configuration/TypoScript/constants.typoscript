@@ -29,7 +29,7 @@ plugin.tx_news.settings {
 
     top {
       # cat=plugin.tx_news/detail/top-a; type=int+; label=Top image - maximum image width
-      maxWidth = 600
+      maxWidth = 1200
       # cat=plugin.tx_news/detail/top-b; type=int+; label=Top image - maximum image height
       maxHeight =
     }

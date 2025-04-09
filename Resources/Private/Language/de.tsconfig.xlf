@@ -4,25 +4,25 @@
 		  product-name="newslayouts">
 		<header/>
 		<body>
-			<trans-unit id="layout.topImageGalleryBottom">
-				<source>Top image with gallery below the text</source>
-				<target>Bild oben mit Galerie unterhalb des Textes</target>
+			<trans-unit id="templateLayouts.detail.default">
+				<source>Detail - Default</source>
+				<target>Detail - Standard</target>
 			</trans-unit>
-			<trans-unit id="layout.galleryBottom">
-				<source>Gallery below the text</source>
-				<target>Galerie unterhalb des Textes</target>
+			<trans-unit id="templateLayouts.detail.topImage">
+				<source>Detail - Top image</source>
+				<target>Detail - Bild oben</target>
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.3columns">
 				<source>List - 3 columns</source>
-				<target>Neuste - 3 Spalten</target>
+				<target>Liste - 3 Spalten</target>
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.4columns">
 				<source>List - 4 columns</source>
-				<target>Neuste - 4 Spalten</target>
+				<target>Liste - 4 Spalten</target>
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.vertical">
 				<source>List - Vertical</source>
-				<target>Neuste - Vertikal</target>
+				<target>Liste - Vertikal</target>
 			</trans-unit>
 			<trans-unit id="templateLayouts.list.default">
 				<source>List - Default</source>

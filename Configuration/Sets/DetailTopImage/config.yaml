@@ -1,0 +1,4 @@
+name: wapplersystems/newslayouts-detail-topimage
+label: Newslayouts Detail Top-Image View
+dependencies:
+  - wapplersystems/newslayouts

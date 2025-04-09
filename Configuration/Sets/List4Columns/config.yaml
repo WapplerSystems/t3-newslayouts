@@ -1,0 +1,4 @@
+name: wapplersystems/newslayouts-list-3columns
+label: Newslayouts 3 Columns List View
+dependencies:
+  - wapplersystems/newslayouts

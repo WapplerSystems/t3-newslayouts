@@ -1,11 +1,11 @@
 
 tx_news.templateLayouts {
-  DetailDefault = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.galleryBottom
+  DetailDefault = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.detail.default
 }
 
 # Layout for news article
 TCEFORM.tx_news_domain_model_news.layout.addItems {
-  #galleryBottom = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:layout.galleryBottom
+  default = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.detail.default
   #galleryBottom.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
 }
 

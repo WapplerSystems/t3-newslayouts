@@ -28,3 +28,11 @@ plugin.tx_news.settings {
 
 
 }
+
+tt_content.news_pi1.dataProcessing {
+  400 = WapplerSystems\Newslayouts\Frontend\DataProcessing\DummyImageProcessor
+  400 {
+    references.table = tt_content
+    references.fieldName = tx_newslayouts_dummyimage
+  }
+}

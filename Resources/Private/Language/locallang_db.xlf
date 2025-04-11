@@ -46,6 +46,9 @@
 			<trans-unit id="meta.showCategory.all">
 				<source>All</source>
 			</trans-unit>
+			<trans-unit id="tt_content.tx_newslayouts_dummyimage">
+				<source>Placeholder image</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

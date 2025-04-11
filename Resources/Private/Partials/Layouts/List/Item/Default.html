@@ -5,7 +5,7 @@
 
 <div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
     <n:excludeDisplayedNews newsItem="{newsItem}"/>
-    <!-- header -->
+
     <div class="header">
         <nl:tag name="h{headingType}">
             <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
@@ -24,7 +24,7 @@
                 <f:render partial="PreviewImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass}' }"/>
             </f:then>
             <f:else>
-                <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass}' }"/>
+                <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass}', dummyImage:dummyImage }"/>
             </f:else>
         </f:if>
 

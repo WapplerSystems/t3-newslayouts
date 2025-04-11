@@ -6,7 +6,7 @@
 <f:if condition="{settings.hidePagination}">
     <f:then>
         <f:for each="{news}" as="newsItem" iteration="iterator">
-            <f:render partial="Layouts/List/Item/Default" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
+            <f:render partial="Layouts/List/Item/Default" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType,dummyImage:contentObjectData.dummyImage}"/>
         </f:for>
     </f:then>
     <f:else>
@@ -14,7 +14,7 @@
             <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator:pagination.paginator}"/>
         </f:if>
         <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-            <f:render partial="Layouts/List/Item/Default" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
+            <f:render partial="Layouts/List/Item/Default" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType,dummyImage:contentObjectData.dummyImage}"/>
         </f:for>
         <f:if condition="{settings.list.paginate.insertBelow}">
             <f:render partial="List/Pagination" arguments="{pagination:pagination.pagination, paginator:pagination.paginator}"/>

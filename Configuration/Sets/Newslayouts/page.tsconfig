@@ -74,6 +74,9 @@ TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop
   16-9 < cropVariants.16-9
 }
 
+TCEFORM.tt_content.tx_newslayouts_dummyimage.config.overrideChildTca.columns.crop.config.cropVariants < TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants
+
+
 TCEFORM.tx_news_domain_model_news.gallery.config.overrideChildTca.columns.crop.config.cropVariants {
   1-1 < cropVariants.1-1
 }

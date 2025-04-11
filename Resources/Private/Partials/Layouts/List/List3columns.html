@@ -2,13 +2,12 @@
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-
 <f:if condition="{settings.hidePagination}">
     <f:then>
         <div class="row gy-5">
             <f:for each="{news}" as="newsItem" iteration="iterator">
                 <div class="col-12 col-md-4">
-                    <f:render partial="Layouts/List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
+                    <f:render partial="Layouts/List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType,dummyImage:contentObjectData.dummyImage}"/>
                 </div>
             </f:for>
         </div>
@@ -20,7 +19,7 @@
         <div class="row gy-5">
             <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
                 <div class="col-12 col-md-4">
-                    <f:render partial="Layouts/List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType}"/>
+                    <f:render partial="Layouts/List/Item/Card" arguments="{newsItem:newsItem,settings:settings,iterator:iterator,headingType:settings.list.headingType,dummyImage:contentObjectData.dummyImage}"/>
                 </div>
             </f:for>
         </div>

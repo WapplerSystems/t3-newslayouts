@@ -39,7 +39,7 @@
     </div>
 
 
-    <f:if condition="{settings.meta.showDate} && {settings.meta.showCategory} != 'none' && {settings.meta.showTags} && {settings.meta.showAuthor}">
+    <f:if condition="{settings.meta.showDate} || {settings.meta.showCategory} != 'none' || {settings.meta.showTags} || {settings.meta.showAuthor}">
         <div class="footer">
             <f:render partial="Meta" arguments="{settings:settings, newsItem:newsItem}"/>
         </div>

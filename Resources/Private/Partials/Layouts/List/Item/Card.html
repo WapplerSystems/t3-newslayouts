@@ -28,7 +28,7 @@
             <f:render partial="Teaser" arguments="{_all}"/>
         </div>
 
-        <f:if condition="{settings.meta.showDate} && {settings.meta.showCategory} != 'none' && {settings.meta.showTags} && {settings.meta.showAuthor}">
+        <f:if condition="{settings.meta.showDate} || {settings.meta.showCategory} != 'none' || {settings.meta.showTags} || {settings.meta.showAuthor}">
             <div class="card-footer">
                 <f:render partial="Meta" arguments="{settings:settings, newsItem:newsItem}"/>
             </div>

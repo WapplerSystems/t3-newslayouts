@@ -5,8 +5,8 @@ tx_news.templateLayouts {
 
 # Layout for news article
 TCEFORM.tx_news_domain_model_news.layout.addItems {
-  TopImage = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.detail.topImage
-  TopImage.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
+  DetailTopImage = LLL:EXT:newslayouts/Resources/Private/Language/tsconfig.xlf:templateLayouts.detail.topImage
+  DetailTopImage.icon = EXT:newslayouts/Resources/Public/Icons/layout1.svg
 }
 
 TCEFORM.tx_news_domain_model_news.fal_media.config.overrideChildTca.columns.crop.config.cropVariants {

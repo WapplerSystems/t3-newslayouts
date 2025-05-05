@@ -1,4 +1,4 @@
-name: wapplersystems/newslayouts-list-3columns
-label: Newslayouts 3 Columns List View
+name: wapplersystems/newslayouts-list-4columns
+label: Newslayouts 4 Columns List View
 dependencies:
   - wapplersystems/newslayouts

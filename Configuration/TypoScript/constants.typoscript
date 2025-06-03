@@ -4,12 +4,6 @@
 # customsubcategory=gallery=Gallery
 # customsubcategory=image=Image settings
 
-plugin.tx_news.view {
-  partialRootPath = EXT:newslayouts/Resources/Private/Partials/
-  templateRootPath = EXT:newslayouts/Resources/Private/Templates/
-  layoutRootPath = EXT:newslayouts/Resources/Private/Layouts/
-}
-
 plugin.tx_news.settings {
 
   cssFile = EXT:newslayouts/Resources/Public/CSS/newslayouts.css

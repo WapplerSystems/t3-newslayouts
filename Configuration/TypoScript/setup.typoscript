@@ -3,6 +3,10 @@ plugin.tx_news.settings {
 
 }
 
+plugin.tx_news.view.layoutRootPaths.9 = EXT:newslayouts/Resources/Private/Layouts/
+plugin.tx_news.view.partialRootPaths.9 = EXT:newslayouts/Resources/Private/Partials/
+plugin.tx_news.view.templateRootPaths.9 = EXT:newslayouts/Resources/Private/Templates/
+
 
 plugin.tx_news.settings {
 

@@ -14,7 +14,7 @@
     </f:then>
     <f:else>
         <f:if condition="{settings.list.paginate.insertAbove}">
-            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator:pagination.paginator}"/>
+            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator:pagination.paginator, position:'above'}"/>
         </f:if>
         <div class="row gy-5">
             <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
@@ -24,7 +24,7 @@
             </f:for>
         </div>
         <f:if condition="{settings.list.paginate.insertBelow}">
-            <f:render partial="List/Pagination" arguments="{pagination:pagination.pagination, paginator:pagination.paginator}"/>
+            <f:render partial="List/Pagination" arguments="{pagination:pagination.pagination, paginator:pagination.paginator, position:'below'}"/>
         </f:if>
     </f:else>
 </f:if>

@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  WapplerSystems\Newslayouts\EventListener\ModifyFlexformEvent:
+    tags:
+      - name: event.listener
+        identifier: 'newslayoutFlexformPatching'
+        event: TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureParsedEvent
+

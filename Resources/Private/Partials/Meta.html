@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<ul class="news-meta">
+    <f:if condition="{settings.meta.showDate}">
+        <li class="news-meta-item news-list-date">
+            <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+            </time>
+        </li>
+    </f:if>
+    <f:if condition="{settings.meta.showCategory} == 'first' && {newsItem.firstCategory}">
+        <li class="news-meta-item">
+            <span class="news-list-category">{newsItem.firstCategory.title}</span>
+        </li>
+    </f:if>
+    <f:if condition="{settings.meta.showCategory} == 'all' && {newsItem.categories}">
+        <li class="news-meta-item">
+            <f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
+        </li>
+    </f:if>
+    <f:if condition="{settings.meta.showTags} && {newsItem.tags}">
+        <li class="news-meta-item">
+            <span class="news-list-tags" itemprop="keywords">
+                <f:for each="{newsItem.tags}" as="tag">
+                    {tag.title}
+                </f:for>
+            </span>
+        </li>
+    </f:if>
+    <f:if condition="{settings.meta.showAuthor} && {newsItem.author}">
+        <li class="news-meta-item">
+            <span class="news-list-author"><f:translate key="author" arguments="{0:newsItem.author}"/></span>
+        </li>
+    </f:if>
+</ul>
+
+</html>

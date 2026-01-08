@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:nl="http://typo3.org/ns/WapplerSystems/Newslayouts/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+
+<div class="card news-card article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
+    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+        <n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+
+        <f:variable name="cropVariant" value="{f:if(condition: '{settings.imageFormat} == \'default\'',then:'4-3',else:settings.imageFormat)}"/>
+
+        <f:if condition="{newsItem.mediaPreviews}">
+            <f:then>
+                <f:render partial="PreviewImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass} card-img-top' }"/>
+            </f:then>
+            <f:else>
+                <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass} card-img-top', dummyImage:dummyImage }"/>
+            </f:else>
+        </f:if>
+
+        <div class="card-body">
+            <nl:tag name="h{headingType}" class="card-title">
+                <span itemprop="headline">{newsItem.title}</span>
+            </nl:tag>
+
+            <f:render partial="Teaser" arguments="{_all}"/>
+        </div>
+
+        <f:if condition="{settings.meta.showDate} || {settings.meta.showCategory} != 'none' || {settings.meta.showTags} || {settings.meta.showAuthor}">
+            <div class="card-footer">
+                <f:render partial="Meta" arguments="{settings:settings, newsItem:newsItem}"/>
+            </div>
+        </f:if>
+
+    </n:link>
+</div>
+
+
+</html>

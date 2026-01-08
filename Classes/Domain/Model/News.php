@@ -2,30 +2,9 @@
 
 namespace WapplerSystems\Newslayouts\Domain\Model;
 
-/***************************************************************
- *
- *  Copyright notice
- *
- *  (c) 2017 Sven Wappler, wappler.systems
- *
- *  All rights reserved
- *
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+use GeorgRinger\News\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
  * News
@@ -33,12 +12,28 @@ namespace WapplerSystems\Newslayouts\Domain\Model;
 class News extends \GeorgRinger\News\Domain\Model\News
 {
 
+
     /**
      *
      *
      * @var string
      */
-    protected $layout = '';
+    protected string $layout = '';
+
+    /**
+     *
+     * @var ObjectStorage<FileReference>
+     */
+    #[Lazy]
+    protected $gallery;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->gallery = new ObjectStorage();
+    }
+
 
     /**
      * @return string
@@ -54,6 +49,27 @@ class News extends \GeorgRinger\News\Domain\Model\News
     public function setLayout(string $layout)
     {
         $this->layout = $layout;
+    }
+
+
+    /**
+     * Get the Fal media items
+     *
+     * @return ObjectStorage<FileReference>|null
+     */
+    public function getGallery(): ?ObjectStorage
+    {
+        return $this->gallery;
+    }
+
+    public function getMediaNonPreviewsWithoutFirst() : array
+    {
+        $media = $this->getMediaNonPreviews();
+        if ($media === null || count($media) === 0) {
+            return [];
+        }
+        $media = array_slice($media, 1);
+        return $media;
     }
 
 

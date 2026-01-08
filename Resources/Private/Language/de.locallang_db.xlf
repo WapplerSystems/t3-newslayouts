@@ -6,48 +6,51 @@
 		<body>
 			<trans-unit id="tx_news_domain_model_news.layout">
 				<source>Layout</source>
+				<target>Layout</target>
 			</trans-unit>
 			<trans-unit id="tx_news_domain_model_news.gallery">
 				<source>Gallery</source>
+				<target>Galerie</target>
 			</trans-unit>
 			<trans-unit id="tx_news_domain_model_news.layout">
 				<source>Layout set in the plugin</source>
+				<target>Layout im Plugin gesetzt</target>
 			</trans-unit>
 			<trans-unit id="imageFormat">
 				<source>Image format</source>
+				<target>Bild-Format</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.description">
 				<source>Use this image format if it supports the layout</source>
+				<target>Benutze dieses Bildformat, wenn es das Layout unterstützt</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.default">
 				<source>Default of template</source>
+				<target>Standard des Templates</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.none">
 				<source>None (deactivated)</source>
+				<target>Keines (deaktiviert)</target>
 			</trans-unit>
 			<trans-unit id="allow">
 				<source>Allow</source>
+				<target>Erlaube</target>
 			</trans-unit>
 			<trans-unit id="allowLayoutOverwriteByRecord">
 				<source>Allow the layout to be overwritten by the data set</source>
+				<target>Erlaube das Überschreiben des Layouts durch den Datensatz</target>
 			</trans-unit>
 			<trans-unit id="meta.showDate">
-				<source>Show date</source>
+				<target>Zeige das Datum</target>
 			</trans-unit>
 			<trans-unit id="meta.showCategory">
-				<source>Show category</source>
+				<target>Zeige Kategorie</target>
 			</trans-unit>
-			<trans-unit id="meta.showCategory.none">
-				<source>None</source>
+			<trans-unit id="meta.showTags">
+				<target>Zeige Tags</target>
 			</trans-unit>
-			<trans-unit id="meta.showCategory.first">
-				<source>First</source>
-			</trans-unit>
-			<trans-unit id="meta.showCategory.all">
-				<source>All</source>
-			</trans-unit>
-			<trans-unit id="tt_content.tx_newslayouts_dummyimage">
-				<source>Placeholder image</source>
+			<trans-unit id="meta.showAuthor">
+				<target>Zeige den Autor</target>
 			</trans-unit>
 		</body>
 	</file>

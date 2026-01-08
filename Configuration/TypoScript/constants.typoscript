@@ -1,0 +1,51 @@
+
+# customsubcategory=list=List View
+# customsubcategory=detail=Detail View
+# customsubcategory=gallery=Gallery
+# customsubcategory=image=Image settings
+
+plugin.tx_news.settings {
+
+  cssFile = EXT:newslayouts/Resources/Public/CSS/newslayouts.css
+
+  # cat=plugin.tx_news/image/a; type=string; label=Image class
+  imageClass = img-fluid
+
+  list {
+
+    # cat=plugin.tx_news/list/c; type=int+; label=Heading type
+    headingType = 3
+
+  }
+
+  detail {
+
+
+    top {
+      # cat=plugin.tx_news/detail/top-a; type=int+; label=Top image - maximum image width
+      maxWidth = 1200
+      # cat=plugin.tx_news/detail/top-b; type=int+; label=Top image - maximum image height
+      maxHeight =
+    }
+
+    gallery {
+      # cat=plugin.tx_news/detail/gallery-a; type=int+; label=Gallery images - maximum image width
+      maxWidth = 600
+      # cat=plugin.tx_news/detail/gallery-b; type=int+; label=Gallery images - maximum image height
+      maxHeight =
+    }
+
+    # cat=plugin.tx_news/detail/c; type=int+; label=Heading type
+    headingType = 1
+
+    # cat=plugin.tx_news/detail/d; type=boolean; label=Show date
+    showDate = 1
+    # cat=plugin.tx_news/detail/e; type=boolean; label=Show category
+    showCategory = 1
+    # cat=plugin.tx_news/detail/f; type=boolean; label=Show author
+    showAuthor = 1
+  }
+
+
+
+}

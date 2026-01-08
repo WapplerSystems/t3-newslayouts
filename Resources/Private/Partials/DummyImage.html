@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.displayDummyIfNoMedia}">
+    <div class="">
+        <span class="no-media-element">
+            <f:image src="{settings.list.media.dummyImage}" title="" alt="" loading="{settings.list.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}"
+                     maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+        </span>
+    </div>
+</f:if>
+
+</html>

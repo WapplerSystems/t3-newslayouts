@@ -1,7 +1,7 @@
 {
 	"name": "wapplersystems/newslayouts",
 	"type": "typo3-cms-extension",
-	"description": "Extends EXT:news records with individual layout settings",
+	"description": "Extends EXT:news plugins and records with individual layout settings. Supports bootstrap css framework",
 	"homepage": "https://wappler.systems",
 	"license": [
 		"GPL-2.0+"

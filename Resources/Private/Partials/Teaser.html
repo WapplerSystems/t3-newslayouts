@@ -2,11 +2,19 @@
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<f:if condition="{newsItem.teaser}">
-    <!-- teaser -->
-    <div class="teaser-text" itemprop="description">
-        <f:format.html>{newsItem.teaser}</f:format.html>
-    </div>
-</f:if>
+<div class="">
+    <n:removeMediaTags>
+        <f:if condition="{newsItem.teaser}">
+            <f:then>
+                <p itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</p>
+            </f:then>
+            <f:else>
+                <p itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</p>
+            </f:else>
+        </f:if>
+    </n:removeMediaTags>
+
+    <f:translate key="more-link"/>
+</div>
 
 </html>

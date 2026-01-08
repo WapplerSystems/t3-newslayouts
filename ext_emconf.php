@@ -1,22 +1,22 @@
 <?php
 
-$EM_CONF['newslayouts'] = [
+$EM_CONF[$_EXTKEY] = [
     'title' => 'Layouts for news articles',
     'description' => 'Extends EXT:news records with individual layout settings',
     'category' => 'plugin',
     'author' => 'Sven Wappler',
     'author_email' => 'typo3YYYY@wappler.systems',
     'author_company' => 'WapplerSystems',
-    'state' => 'beta',
+    'state' => 'stable',
     'internal' => '',
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '0.2.0',
+    'version' => '12.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.0.0-11.9.99',
-            'news' => '9.0.0-9.9.99',
+            'typo3' => '12.0.0-12.4.99',
+            'news' => '9.0.0',
         ],
         'conflicts' => [],
         'suggests' => [],

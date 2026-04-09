@@ -7,7 +7,7 @@ use TYPO3Fluid\Fluid\View\TemplatePaths;
 
 class PartialExistsViewHelper extends AbstractViewHelper
 {
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('partial', 'string', 'Name of the partial', true);
     }

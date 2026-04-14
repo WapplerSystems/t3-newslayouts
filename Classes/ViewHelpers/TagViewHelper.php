@@ -17,7 +17,7 @@ class TagViewHelper extends AbstractTagBasedViewHelper
     /**
      * @return string
      */
-    public function render()
+    public function render(): string
     {
         /** @var string $tagName */
         $tagName = $this->arguments['name'];

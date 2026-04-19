@@ -10,26 +10,26 @@
 			<trans-unit id="tx_news_domain_model_news.gallery">
 				<source>Gallery</source>
 			</trans-unit>
-			<trans-unit id="tx_news_domain_model_news.layout">
+			<trans-unit id="tx_news_domain_model_news.layout.plugin">
 				<source>Layout set in the plugin</source>
 			</trans-unit>
 			<trans-unit id="imageFormat">
 				<source>Image format</source>
 			</trans-unit>
 			<trans-unit id="imageFormat.description">
-				<source>Use this image format if it supports the layout</source>
+				<source>Use this image format if the layout supports it</source>
 			</trans-unit>
 			<trans-unit id="imageFormat.default">
-				<source>Default of template</source>
+				<source>Template default</source>
 			</trans-unit>
 			<trans-unit id="imageFormat.none">
-				<source>None (deactivated)</source>
+				<source>None (disabled)</source>
 			</trans-unit>
 			<trans-unit id="allow">
 				<source>Allow</source>
 			</trans-unit>
 			<trans-unit id="allowLayoutOverwriteByRecord">
-				<source>Allow the layout to be overwritten by the data set</source>
+				<source>Allow layout override per record</source>
 			</trans-unit>
 			<trans-unit id="meta.showDate">
 				<source>Show date</source>
@@ -41,10 +41,16 @@
 				<source>None</source>
 			</trans-unit>
 			<trans-unit id="meta.showCategory.first">
-				<source>First</source>
+				<source>First category</source>
 			</trans-unit>
 			<trans-unit id="meta.showCategory.all">
-				<source>All</source>
+				<source>All categories</source>
+			</trans-unit>
+			<trans-unit id="meta.showTags">
+				<source>Show tags</source>
+			</trans-unit>
+			<trans-unit id="meta.showAuthor">
+				<source>Show author</source>
 			</trans-unit>
 			<trans-unit id="tt_content.tx_newslayouts_dummyimage">
 				<source>Placeholder image</source>

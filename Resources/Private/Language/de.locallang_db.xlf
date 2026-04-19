@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z"
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-02-03T22:04:04Z"
 		  product-name="newslayouts">
 		<header/>
 		<body>
@@ -12,45 +12,65 @@
 				<source>Gallery</source>
 				<target>Galerie</target>
 			</trans-unit>
-			<trans-unit id="tx_news_domain_model_news.layout">
+			<trans-unit id="tx_news_domain_model_news.layout.plugin">
 				<source>Layout set in the plugin</source>
-				<target>Layout im Plugin gesetzt</target>
+				<target>Im Plugin gesetztes Layout</target>
 			</trans-unit>
 			<trans-unit id="imageFormat">
 				<source>Image format</source>
-				<target>Bild-Format</target>
+				<target>Bildformat</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.description">
-				<source>Use this image format if it supports the layout</source>
-				<target>Benutze dieses Bildformat, wenn es das Layout unterstützt</target>
+				<source>Use this image format if the layout supports it</source>
+				<target>Dieses Bildformat verwenden, wenn es vom Layout unterstützt wird</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.default">
-				<source>Default of template</source>
-				<target>Standard des Templates</target>
+				<source>Template default</source>
+				<target>Template-Standard</target>
 			</trans-unit>
 			<trans-unit id="imageFormat.none">
-				<source>None (deactivated)</source>
+				<source>None (disabled)</source>
 				<target>Keines (deaktiviert)</target>
 			</trans-unit>
 			<trans-unit id="allow">
 				<source>Allow</source>
-				<target>Erlaube</target>
+				<target>Erlauben</target>
 			</trans-unit>
 			<trans-unit id="allowLayoutOverwriteByRecord">
-				<source>Allow the layout to be overwritten by the data set</source>
-				<target>Erlaube das Überschreiben des Layouts durch den Datensatz</target>
+				<source>Allow layout override per record</source>
+				<target>Layout-Überschreibung pro Datensatz erlauben</target>
 			</trans-unit>
 			<trans-unit id="meta.showDate">
-				<target>Zeige das Datum</target>
+				<source>Show date</source>
+				<target>Datum anzeigen</target>
 			</trans-unit>
 			<trans-unit id="meta.showCategory">
-				<target>Zeige Kategorie</target>
+				<source>Show category</source>
+				<target>Kategorie anzeigen</target>
+			</trans-unit>
+			<trans-unit id="meta.showCategory.none">
+				<source>None</source>
+				<target>Keine</target>
+			</trans-unit>
+			<trans-unit id="meta.showCategory.first">
+				<source>First category</source>
+				<target>Erste Kategorie</target>
+			</trans-unit>
+			<trans-unit id="meta.showCategory.all">
+				<source>All categories</source>
+				<target>Alle Kategorien</target>
 			</trans-unit>
 			<trans-unit id="meta.showTags">
-				<target>Zeige Tags</target>
+				<source>Show tags</source>
+				<target>Schlagwörter anzeigen</target>
 			</trans-unit>
 			<trans-unit id="meta.showAuthor">
-				<target>Zeige den Autor</target>
+				<source>Show author</source>
+				<target>Autor anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_newslayouts_dummyimage">
+				<source>Placeholder image</source>
+				<target>Platzhalterbild</target>
 			</trans-unit>
 		</body>
 	</file>

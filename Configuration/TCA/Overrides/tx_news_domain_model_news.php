@@ -12,7 +12,7 @@ $fields = [
             'type' => 'select',
             'renderType' => 'selectSingle',
             'items' => [
-                ['LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.layout', ''],
+                ['label' => 'LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.layout.plugin', 'value' => ''],
             ],
             'minitems' => 0,
             'maxitems' => 1,

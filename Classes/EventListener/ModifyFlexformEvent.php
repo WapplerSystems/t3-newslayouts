@@ -13,8 +13,9 @@ class ModifyFlexformEvent
         $dataStructure = $event->getDataStructure();
         $identifier = $event->getIdentifier();
 
-        // $identifier['dataStructureKey'] depends on the selected plugin!
-        if ($identifier['type'] === 'tca' && $identifier['tableName'] === 'tt_content' && str_starts_with($identifier['dataStructureKey'],'*,news_')) {
+        if ($identifier['type'] === 'tca' && $identifier['tableName'] === 'tt_content'
+            && (str_starts_with($identifier['dataStructureKey'] ?? '', '*,news_')
+                || str_starts_with($identifier['dataStructureKey'] ?? '', 'news_'))) {
             $file = GeneralUtility::getFileAbsFileName('EXT:newslayouts/Configuration/FlexForm/Patch.xml');
             $content = file_get_contents($file);
             if ($content) {

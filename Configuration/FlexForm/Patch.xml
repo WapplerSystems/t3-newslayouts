@@ -6,7 +6,7 @@
                 <settings.allowLayoutOverwriteByRecord>
                     <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:allowLayoutOverwriteByRecord</label>
                     <config>
-                        <type>checkbox</type>
+                        <type>check</type>
                         <renderType>checkboxToggle</renderType>
                         <default>0</default>
                         <items>
@@ -40,7 +40,7 @@
                 <settings.meta.showDate>
                     <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showDate</label>
                     <config>
-                        <type>checkbox</type>
+                        <type>check</type>
                         <renderType>checkboxToggle</renderType>
                         <default>1</default>
                         <items>
@@ -76,7 +76,7 @@
                 <settings.meta.showTags>
                     <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showTags</label>
                     <config>
-                        <type>checkbox</type>
+                        <type>check</type>
                         <renderType>checkboxToggle</renderType>
                         <default>1</default>
                         <items>
@@ -90,7 +90,7 @@
                 <settings.meta.showAuthor>
                     <label>LLL:EXT:newslayouts/Resources/Private/Language/locallang_db.xlf:meta.showAuthor</label>
                     <config>
-                        <type>checkbox</type>
+                        <type>check</type>
                         <renderType>checkboxToggle</renderType>
                         <default>1</default>
                         <items>

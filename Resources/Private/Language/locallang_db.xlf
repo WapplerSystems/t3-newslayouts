@@ -55,6 +55,93 @@
 			<trans-unit id="tt_content.tx_newslayouts_dummyimage">
 				<source>Placeholder image</source>
 			</trans-unit>
+			<trans-unit id="slider.sheetTitle">
+				<source>Swiper Slider</source>
+			</trans-unit>
+			<trans-unit id="slider.sheetDescription">
+				<source>Be sure to save after changing the template layout to "Slider".</source>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints.description">
+				<source>Number of slides visible per view at this responsive breakpoint (screen width).</source>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints576">
+				<source>Slides per view - breakpoint &#8805; 576px</source>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints768">
+				<source>Slides per view - breakpoint &#8805; 768px</source>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints992">
+				<source>Slides per view - breakpoint &#8805; 992px</source>
+			</trans-unit>
+			<trans-unit id="slider.slidesPerGroup">
+				<source>Slides per step (0 = full page)</source>
+			</trans-unit>
+			<trans-unit id="slider.slidesPerGroup.description">
+				<source>Number of slides to advance per step. 0 (default) pages a full view at a time, so each pagination bullet is one page. A fixed value advances exactly that many slides.</source>
+			</trans-unit>
+			<trans-unit id="slider.spaceBetween">
+				<source>Space between (px)</source>
+			</trans-unit>
+			<trans-unit id="slider.spaceBetween.description">
+				<source>Distance between slides in pixels.</source>
+			</trans-unit>
+			<trans-unit id="slider.loop">
+				<source>Loop</source>
+			</trans-unit>
+			<trans-unit id="slider.loop.description">
+				<source>Enable continuous loop mode. The number of slides should be at least twice the slides per view.</source>
+			</trans-unit>
+			<trans-unit id="slider.navigation">
+				<source>Navigation arrows</source>
+			</trans-unit>
+			<trans-unit id="slider.navigation.description">
+				<source>Show previous/next navigation arrows.</source>
+			</trans-unit>
+			<trans-unit id="slider.pagination">
+				<source>Pagination</source>
+			</trans-unit>
+			<trans-unit id="slider.pagination.description">
+				<source>Show clickable pagination bullets.</source>
+			</trans-unit>
+			<trans-unit id="slider.autoplay">
+				<source>Autoplay</source>
+			</trans-unit>
+			<trans-unit id="slider.autoplay.description">
+				<source>Automatically advance slides.</source>
+			</trans-unit>
+			<trans-unit id="slider.delay">
+				<source>Autoplay delay (ms)</source>
+			</trans-unit>
+			<trans-unit id="slider.delay.description">
+				<source>Delay between transitions in milliseconds.</source>
+			</trans-unit>
+			<trans-unit id="slider.newsTitleType">
+				<source>News title heading level</source>
+			</trans-unit>
+			<trans-unit id="slider.display">
+				<source>Show teaser, bodytext or both</source>
+			</trans-unit>
+			<trans-unit id="slider.display.teaser">
+				<source>Teaser only</source>
+			</trans-unit>
+			<trans-unit id="slider.display.bodytext">
+				<source>Bodytext only</source>
+			</trans-unit>
+			<trans-unit id="slider.display.both">
+				<source>Teaser &amp; bodytext</source>
+			</trans-unit>
+			<trans-unit id="slider.color">
+				<source>Text color</source>
+			</trans-unit>
+			<trans-unit id="slider.backgroundColor">
+				<source>Card background color</source>
+			</trans-unit>
+			<trans-unit id="slider.disableCss">
+				<source>Disable built-in slider CSS</source>
+			</trans-unit>
+			<trans-unit id="slider.disableCss.description">
+				<source>Disable the slider styling shipped with the extension (use your own CSS).</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

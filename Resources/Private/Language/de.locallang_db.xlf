@@ -72,6 +72,122 @@
 				<source>Placeholder image</source>
 				<target>Platzhalterbild</target>
 			</trans-unit>
+			<trans-unit id="slider.sheetTitle">
+				<source>Swiper Slider</source>
+				<target>Swiper Slider</target>
+			</trans-unit>
+			<trans-unit id="slider.sheetDescription">
+				<source>Be sure to save after changing the template layout to "Slider".</source>
+				<target>Nach dem Wechsel des Template-Layouts auf „Slider" bitte speichern.</target>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints.description">
+				<source>Number of slides visible per view at this responsive breakpoint (screen width).</source>
+				<target>Anzahl der gleichzeitig sichtbaren Slides bei diesem Breakpoint (Bildschirmbreite).</target>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints576">
+				<source>Slides per view - breakpoint &#8805; 576px</source>
+				<target>Slides pro Ansicht - Breakpoint &#8805; 576px</target>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints768">
+				<source>Slides per view - breakpoint &#8805; 768px</source>
+				<target>Slides pro Ansicht - Breakpoint &#8805; 768px</target>
+			</trans-unit>
+			<trans-unit id="slider.breakpoints992">
+				<source>Slides per view - breakpoint &#8805; 992px</source>
+				<target>Slides pro Ansicht - Breakpoint &#8805; 992px</target>
+			</trans-unit>
+			<trans-unit id="slider.slidesPerGroup">
+				<source>Slides per step (0 = full page)</source>
+				<target>Slides pro Blätter-Schritt (0 = ganze Ansicht)</target>
+			</trans-unit>
+			<trans-unit id="slider.slidesPerGroup.description">
+				<source>Number of slides to advance per step. 0 (default) pages a full view at a time, so each pagination bullet is one page. A fixed value advances exactly that many slides.</source>
+				<target>Anzahl der Slides, die pro Schritt weitergeblättert werden. 0 (Standard) blättert seitenweise eine ganze Ansicht weiter – jeder Pagination-Punkt ist eine Seite. Ein fester Wert blättert genau so viele Slides.</target>
+			</trans-unit>
+			<trans-unit id="slider.spaceBetween">
+				<source>Space between (px)</source>
+				<target>Abstand zwischen Slides (px)</target>
+			</trans-unit>
+			<trans-unit id="slider.spaceBetween.description">
+				<source>Distance between slides in pixels.</source>
+				<target>Abstand zwischen den Slides in Pixeln.</target>
+			</trans-unit>
+			<trans-unit id="slider.loop">
+				<source>Loop</source>
+				<target>Endlosschleife</target>
+			</trans-unit>
+			<trans-unit id="slider.loop.description">
+				<source>Enable continuous loop mode. The number of slides should be at least twice the slides per view.</source>
+				<target>Endlosschleife aktivieren. Die Anzahl der Slides sollte mindestens doppelt so groß sein wie die Slides pro Ansicht.</target>
+			</trans-unit>
+			<trans-unit id="slider.navigation">
+				<source>Navigation arrows</source>
+				<target>Navigationspfeile</target>
+			</trans-unit>
+			<trans-unit id="slider.navigation.description">
+				<source>Show previous/next navigation arrows.</source>
+				<target>Vor-/Zurück-Navigationspfeile anzeigen.</target>
+			</trans-unit>
+			<trans-unit id="slider.pagination">
+				<source>Pagination</source>
+				<target>Paginierung</target>
+			</trans-unit>
+			<trans-unit id="slider.pagination.description">
+				<source>Show clickable pagination bullets.</source>
+				<target>Klickbare Paginierungs-Punkte anzeigen.</target>
+			</trans-unit>
+			<trans-unit id="slider.autoplay">
+				<source>Autoplay</source>
+				<target>Autoplay</target>
+			</trans-unit>
+			<trans-unit id="slider.autoplay.description">
+				<source>Automatically advance slides.</source>
+				<target>Slides automatisch weiterschalten.</target>
+			</trans-unit>
+			<trans-unit id="slider.delay">
+				<source>Autoplay delay (ms)</source>
+				<target>Autoplay-Verzögerung (ms)</target>
+			</trans-unit>
+			<trans-unit id="slider.delay.description">
+				<source>Delay between transitions in milliseconds.</source>
+				<target>Verzögerung zwischen den Übergängen in Millisekunden.</target>
+			</trans-unit>
+			<trans-unit id="slider.newsTitleType">
+				<source>News title heading level</source>
+				<target>Überschriften-Ebene des News-Titels</target>
+			</trans-unit>
+			<trans-unit id="slider.display">
+				<source>Show teaser, bodytext or both</source>
+				<target>Teaser, Fließtext oder beides anzeigen</target>
+			</trans-unit>
+			<trans-unit id="slider.display.teaser">
+				<source>Teaser only</source>
+				<target>Nur Teaser</target>
+			</trans-unit>
+			<trans-unit id="slider.display.bodytext">
+				<source>Bodytext only</source>
+				<target>Nur Fließtext</target>
+			</trans-unit>
+			<trans-unit id="slider.display.both">
+				<source>Teaser &amp; bodytext</source>
+				<target>Teaser &amp; Fließtext</target>
+			</trans-unit>
+			<trans-unit id="slider.color">
+				<source>Text color</source>
+				<target>Textfarbe</target>
+			</trans-unit>
+			<trans-unit id="slider.backgroundColor">
+				<source>Card background color</source>
+				<target>Hintergrundfarbe der Karte</target>
+			</trans-unit>
+			<trans-unit id="slider.disableCss">
+				<source>Disable built-in slider CSS</source>
+				<target>Mitgeliefertes Slider-CSS deaktivieren</target>
+			</trans-unit>
+			<trans-unit id="slider.disableCss.description">
+				<source>Disable the slider styling shipped with the extension (use your own CSS).</source>
+				<target>Das mit der Extension ausgelieferte Slider-Styling deaktivieren (eigenes CSS verwenden).</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

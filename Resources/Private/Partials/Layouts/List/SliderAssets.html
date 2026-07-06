@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="newslayouts-swiper" href="EXT:newslayouts/Resources/Public/CSS/Swiper/swiper-bundle.min.css"/>
+<f:asset.script identifier="newslayouts-swiper" src="EXT:newslayouts/Resources/Public/JavaScript/Swiper/swiper-bundle.min.js"/>
+<f:asset.script identifier="newslayouts-slider-init" src="EXT:newslayouts/Resources/Public/JavaScript/newslayouts-slider.js"/>
+
+<f:if condition="{settings.slider.disableCss} != 1">
+    <f:asset.css identifier="newslayouts-slider-{contentObjectData.uid}">
+#swiper-{contentObjectData.uid}{width:100%;height:auto;display:flex;margin-bottom:1rem}
+#swiper-{contentObjectData.uid} .swiper-wrapper{height:auto}
+#swiper-{contentObjectData.uid} .swiper-slide{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+#swiper-{contentObjectData.uid} .swiper-slide img{display:block;width:100%;height:auto;object-fit:cover}
+#swiper-{contentObjectData.uid} .swiper-button-next,#swiper-{contentObjectData.uid} .swiper-button-prev{color:#fff;text-shadow:1px 1px 2px #000,0 0 25px #000,0 0 5px #000}
+#swiper-{contentObjectData.uid} .slider-link{height:100%}
+#newslayouts-swiper-{contentObjectData.uid} .swiper-pagination{position:static;width:100%;margin-top:.75rem;margin-bottom:1rem;text-align:center;line-height:1}
+#newslayouts-swiper-{contentObjectData.uid} .swiper-pagination .swiper-pagination-bullet{margin:0 5px}
+#swiper-{contentObjectData.uid} .news-teaser{font-size:1.25rem;font-weight:300}
+#swiper-{contentObjectData.uid} .card{height:100%!important;display:block;position:relative;overflow:hidden;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent}
+#swiper-{contentObjectData.uid} .no-decoration{text-decoration:none}
+#swiper-{contentObjectData.uid} .newslayouts-slider-figure{overflow:hidden;margin:0}
+#swiper-{contentObjectData.uid} .card img{transition:transform .5s ease-in-out!important}
+#swiper-{contentObjectData.uid} .card:hover img{transform:scale(1.2)}
+#swiper-{contentObjectData.uid} .card::before{content:"";position:absolute;z-index:1;left:50%;right:50%;bottom:0;background:var(--swiper-theme-color);height:4px;transition-property:left,right;transition-duration:.3s;transition-timing-function:ease-out}
+#swiper-{contentObjectData.uid} .card:hover::before,#swiper-{contentObjectData.uid} .card:focus::before,#swiper-{contentObjectData.uid} .card:active::before{left:0;right:0}
+@media (max-width:575px){#swiper-{contentObjectData.uid} .swiper-button-prev,#swiper-{contentObjectData.uid} .swiper-button-next{display:none}}
+    </f:asset.css>
+</f:if>
+
+</html>

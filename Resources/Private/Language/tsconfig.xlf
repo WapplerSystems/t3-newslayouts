@@ -19,6 +19,9 @@
 			<trans-unit id="templateLayouts.list.vertical">
 				<source>List - Vertical</source>
 			</trans-unit>
+			<trans-unit id="templateLayouts.list.slider">
+				<source>List - Slider (Swiper)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

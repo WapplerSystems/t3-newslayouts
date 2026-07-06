@@ -1,0 +1,110 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:nl="http://typo3.org/ns/WapplerSystems/Newslayouts/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:render partial="Layouts/List/SliderAssets" arguments="{_all}"/>
+
+<f:variable name="uid" value="{contentObjectData.uid}"/>
+<f:variable name="sDesktop" value="{f:if(condition: settings.slider.breakpoints992, then: settings.slider.breakpoints992, else: 3)}"/>
+<f:variable name="sTablet" value="{f:if(condition: settings.slider.breakpoints768, then: settings.slider.breakpoints768, else: 2)}"/>
+<f:variable name="sMobile" value="{f:if(condition: settings.slider.breakpoints576, then: settings.slider.breakpoints576, else: 1)}"/>
+<f:variable name="sGroup" value="{f:if(condition: settings.slider.slidesPerGroup, then: settings.slider.slidesPerGroup, else: 0)}"/>
+<f:variable name="sSpace" value="{f:if(condition: settings.slider.spaceBetween, then: settings.slider.spaceBetween, else: 20)}"/>
+<f:variable name="sDelay" value="{f:if(condition: settings.slider.delay, then: settings.slider.delay, else: 5000)}"/>
+<f:variable name="titleType" value="{f:if(condition: settings.slider.newsTitleType, then: settings.slider.newsTitleType, else: 4)}"/>
+<f:variable name="cropVariant" value="{f:if(condition: '{settings.imageFormat} == \'default\'', then: '4-3', else: settings.imageFormat)}"/>
+
+<div id="newslayouts-swiper-{uid}" class="newslayouts-swiper"
+     data-newslayouts-swiper="1"
+     data-uid="{uid}"
+     data-desktop="{sDesktop}"
+     data-tablet="{sTablet}"
+     data-mobile="{sMobile}"
+     data-slides-per-group="{sGroup}"
+     data-space-between="{sSpace}"
+     data-delay="{sDelay}"
+     data-loop="{f:if(condition: settings.slider.loop, then: '1', else: '0')}"
+     data-navigation="{f:if(condition: settings.slider.navigation, then: '1', else: '0')}"
+     data-pagination="{f:if(condition: settings.slider.pagination, then: '1', else: '0')}"
+     data-autoplay="{f:if(condition: settings.slider.autoplay, then: '1', else: '0')}">
+    <div id="swiper-{uid}" class="swiper">
+        <div class="swiper-wrapper">
+            <f:for each="{news}" as="newsItem" iteration="iterator">
+                <n:excludeDisplayedNews newsItem="{newsItem}"/>
+                <div class="swiper-slide">
+                    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="slider-link no-decoration">
+                        <n:excludeDisplayedNews newsItem="{newsItem}"/>
+                        <div class="card news-card rounded-0 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"{f:if(condition: settings.slider.backgroundColor, then: ' style="background-color:{settings.slider.backgroundColor}"')} itemscope="itemscope" itemtype="https://schema.org/Article">
+
+                            <f:if condition="{newsItem.mediaPreviews}">
+                                <f:then>
+                                    <div class="newslayouts-slider-figure">
+                                        <f:render partial="PreviewImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass} img-fluid img-hover-zoom card-img-top'}"/>
+                                    </div>
+                                </f:then>
+                                <f:else>
+                                    <div class="newslayouts-slider-figure">
+                                        <f:render partial="DummyImage" arguments="{newsItem:newsItem, settings:settings, maxHeight:settings.media.maxHeight, maxWidth:settings.media.maxWidth, lazyLoading:settings.list.media.image.lazyLoading, cropVariant:cropVariant, class:'{settings.imageClass} img-fluid img-hover-zoom card-img-top', dummyImage:contentObjectData.dummyImage}"/>
+                                    </div>
+                                </f:else>
+                            </f:if>
+
+                            <f:if condition="{newsItem.title} || {newsItem.teaser} || {newsItem.bodytext}">
+                                <div class="card-body"{f:if(condition: settings.slider.color, then: ' style="color:{settings.slider.color}"')}>
+
+                                    <f:if condition="{settings.meta.showDate} || {settings.meta.showCategory} != 'none' || {settings.meta.showTags} || {settings.meta.showAuthor}">
+                                        <small class="text-muted">
+                                            <f:render partial="Meta" arguments="{settings:settings, newsItem:newsItem}"/>
+                                        </small>
+                                    </f:if>
+
+                                    <f:if condition="{newsItem.title}">
+                                        <header>
+                                            <nl:tag name="h{titleType}" class="card-title">
+                                                <span itemprop="headline">{newsItem.title}</span>
+                                            </nl:tag>
+                                        </header>
+                                    </f:if>
+
+                                    <f:if condition="{newsItem.teaser} && {settings.slider.display} != 2">
+                                        <div class="news-teaser">
+                                            <f:if condition="{settings.cropMaxCharacters}">
+                                                <f:then>{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</f:then>
+                                                <f:else>{newsItem.teaser -> f:format.html()}</f:else>
+                                            </f:if>
+                                        </div>
+                                    </f:if>
+
+                                    <f:if condition="{newsItem.bodytext} && {settings.slider.display} != 1">
+                                        <div class="news-bodytext">
+                                            <n:removeMediaTags>
+                                                <f:if condition="{settings.cropMaxCharacters}">
+                                                    <f:then>{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</f:then>
+                                                    <f:else>{newsItem.bodytext -> f:format.html()}</f:else>
+                                                </f:if>
+                                            </n:removeMediaTags>
+                                        </div>
+                                    </f:if>
+
+                                </div>
+                            </f:if>
+
+                        </div>
+                    </n:link>
+                </div>
+            </f:for>
+        </div>
+
+        <f:if condition="{settings.slider.navigation}">
+            <div class="swiper-button-prev prev-{uid}"></div>
+            <div class="swiper-button-next next-{uid}"></div>
+        </f:if>
+    </div>
+
+    <f:if condition="{settings.slider.pagination}">
+        <div class="swiper-pagination"></div>
+    </f:if>
+</div>
+
+</html>

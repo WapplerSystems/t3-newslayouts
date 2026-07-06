@@ -24,6 +24,10 @@
 				<source>List - Vertical</source>
 				<target>Liste - Vertikal</target>
 			</trans-unit>
+			<trans-unit id="templateLayouts.list.slider">
+				<source>List - Slider (Swiper)</source>
+				<target>Liste - Slider (Swiper)</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

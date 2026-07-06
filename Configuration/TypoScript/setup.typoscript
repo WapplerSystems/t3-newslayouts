@@ -30,6 +30,23 @@ plugin.tx_news.settings {
     headingType = {$plugin.tx_news.settings.detail.headingType}
   }
 
+  # Defaults for the "Slider" template layout (overridable per plugin via FlexForm)
+  slider {
+    breakpoints576 = 1
+    breakpoints768 = 2
+    breakpoints992 = 3
+    # 0 = page-wise (advance a full view per step); >= 1 = fixed number of slides per step
+    slidesPerGroup = 0
+    spaceBetween = 20
+    loop = 0
+    navigation = 1
+    pagination = 1
+    autoplay = 0
+    delay = 5000
+    newsTitleType = 4
+    display = 3
+    disableCss = 0
+  }
 
 }
 

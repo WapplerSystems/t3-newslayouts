@@ -1,0 +1,4 @@
+name: wapplersystems/newslayouts-slider
+label: Newslayouts Slider (Swiper)
+dependencies:
+  - wapplersystems/newslayouts
